@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Homepage for oliverabdulrahim.github.io
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="keywords" content="Oliver, Abdulrahim, GitHub, web, site"/>
+        <meta name="description" content="Oliver Abdulrahim's Website"/>
+
+        <!-- Vendor Dependencies -->
+        <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet"/>
+        <link href="http://cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css" rel="stylesheet">
+        <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+        <script type="text/javascript" src="resources/js/github-activity.js"></script>
+        <link href="resources/css/github-activity.css" rel="stylesheet">
+        <link href="resources/css/default.css" rel="stylesheet" type="text/css" media="all"/>
+
+        <script>
+            function updateFeed(username) {
+                GitHubActivity.feed({
+                    username: username,
+                    selector: '#feed',
+                    limit: 10
+                });
+            }
+            $(document).ready(function() {
+                updateFeed('oliverabdulrahim');
+                $('#update').click(function() {
+                    updateFeed($("#username").val());
+                });
+                $("#username").keypress(function(e) {
+                    if (e.which === 13) {
+                        updateFeed($("#username").val());
+                    }
+                });
+            });
+        </script>
+    </head>
+
+    <body>
+        <div id="page" class="container">
+            <div id="header">
+                <div id="logo">
+                    <img src="resources/images/hipster-profile.png" alt=""/>
+                    <h1><a href="#">Oliver Abdulrahim</a></h1>
+                    <span>Programmer</span>
+                </div>
+                <div id="menu">
+                    <ul>
+                        <li class="current_page_item"><a href="#" accesskey="1" title="">Home</a></li>
+                        <li><a href="#" accesskey="3" title="">Projects</a></li>
+                        <li><a href="#" accesskey="3" title="">Résumé</a></li>
+                        <li><a href="#" accesskey="5" title="">Contact Me</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="main">
+                <div id="welcome">
+                    <div class="title">
+                        <h2>Programming for the greater good. <br> Something like that, anyway.</h2>
+                        <span class="subtitle">
+                            Hi, I'm Oliver, and I write code. This is my website. That much is obvious, right? Less
+                            subtly, you can find links to my projects, résumé, and contact information. Feel free to
+                            poke around!
+                        </span>
+                    </div>
+                </div>
+                <div id="featured">
+                    <div class="title">
+                        <h2>Stuff I've Done Lately</h2>
+                        <span class="subtitle">Polled directly from my GitHub profile.</span>
+                        <div id="feed"></div>
+                    </div>
+                </div>
+                <div id="copyright">
+                    <span>&copy; Oliver Abdulrahim. All rights reserved. </span>
+                    <span>Template from  <a href="http://templated.co" rel="nofollow">here</a>.</span>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
