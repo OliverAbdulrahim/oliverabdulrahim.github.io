@@ -1,0 +1,3 @@
+[submodule "github-activity"]
+	path = vendors/github-activity
+	url = https://github.com/caseyscarborough/github-activity
