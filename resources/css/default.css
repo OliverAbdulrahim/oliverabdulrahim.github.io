@@ -83,6 +83,12 @@ a:hover {
     width: auto;
 }
 
+/* div Styles*/
+
+#main {
+    min-height: 1400px;
+}
+
 /* List Styles */
 
 ul.style1 {
@@ -175,7 +181,6 @@ ul.style1 .date a {
 ul.style1 .date a:hover {
     text-decoration: none;
 }
-
 
 /* Social Media Icons */
 

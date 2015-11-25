@@ -1,4 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
 <!-- Homepage for oliverabdulrahim.github.io -->
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
@@ -32,11 +33,6 @@
                 updateFeed('oliverabdulrahim');
                 $('#update').click(function() {
                     updateFeed($("#username").val());
-                });
-                $("#username").keypress(function(e) {
-                    if (e.which === 13) {
-                        updateFeed($("#username").val());
-                    }
                 });
             });
         </script>
@@ -78,7 +74,7 @@
                         <div id="feed"></div>
                     </div>
                 </div>
-                <div id="copyright">
+                <div id="copyright" class="animated fadeInDown" style="animation-delay: 1.6s;">
                     <span>&copy; Oliver Abdulrahim. All rights reserved. </span>
                     <span>Template from  <a href="http://templated.co" rel="nofollow">here</a>.</span>
                 </div>
