@@ -1,7 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<!--
-Homepage for oliverabdulrahim.github.io
--->
+<!-- Homepage for oliverabdulrahim.github.io -->
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -9,14 +7,17 @@ Homepage for oliverabdulrahim.github.io
         <meta name="description" content="Oliver Abdulrahim's Website"/>
 
         <!-- Vendor Dependencies -->
-        <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet"/>
+        <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet">
+        <link href="http://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
         <link href="http://cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css" rel="stylesheet">
+
+        <link href="resources/css/default.css" rel="stylesheet" type="text/css" media="all"/>
+        <link href="resources/css/github-activity.css" rel="stylesheet">
+
         <script src="http://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
         <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 
-        <script src="vendors/github-activity/src/github-activity.js"></script>
-        <link href="resources/css/github-activity.css" rel="stylesheet">
-        <link href="resources/css/default.css" rel="stylesheet" type="text/css" media="all"/>
+        <script src="resources/js/github-activity.js"></script>
 
         <script>
             function updateFeed(username) {
@@ -26,6 +27,7 @@ Homepage for oliverabdulrahim.github.io
                     limit: 10
                 });
             }
+
             $(document).ready(function() {
                 updateFeed('oliverabdulrahim');
                 $('#update').click(function() {
@@ -44,21 +46,21 @@ Homepage for oliverabdulrahim.github.io
         <div id="page" class="container">
             <div id="header">
                 <div id="logo">
-                    <img src="resources/images/hipster-profile.png" alt=""/>
+                    <img src="resources/images/hipster-profile.png" alt="I'm trapped in this image, help!"/>
                     <h1><a href="#">Oliver Abdulrahim</a></h1>
-                    <span>Programmer</span>
+                    <span>Not a robot</span>
                 </div>
                 <div id="menu">
                     <ul>
                         <li class="current_page_item"><a href="#" accesskey="1" title="">Home</a></li>
-                        <li><a href="#" accesskey="3" title="">Projects</a></li>
+                        <li><a href="#" accesskey="2" title="">Projects</a></li>
                         <li><a href="#" accesskey="3" title="">Résumé</a></li>
-                        <li><a href="#" accesskey="5" title="">Contact Me</a></li>
+                        <li><a href="#" accesskey="4" title="">Contact Me</a></li>
                     </ul>
                 </div>
             </div>
             <div id="main">
-                <div id="welcome">
+                <div id="welcome" class="animated fadeInDown">
                     <div class="title">
                         <h2>Programming for the greater good. <br> Something like that, anyway.</h2>
                         <span class="subtitle">
@@ -68,7 +70,8 @@ Homepage for oliverabdulrahim.github.io
                         </span>
                     </div>
                 </div>
-                <div id="featured">
+                <!-- If JavaScript is disabled, nothing will show here anyway, so okay to make it hidden by default. -->
+                <div id="featured" class="animated fadeInDown" style="animation-delay: 0.8s;">
                     <div class="title">
                         <h2>Stuff I've Done Lately</h2>
                         <span class="subtitle">Polled directly from my GitHub profile.</span>
@@ -83,3 +86,5 @@ Homepage for oliverabdulrahim.github.io
         </div>
     </body>
 </html>
+
+<!-- Now Playing :: Pryda - Lesson One (1998 Demo Version) -->

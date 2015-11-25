@@ -8,6 +8,7 @@
     font-weight: 300;
     color: #444444;
 }
+
 .gha-feed,
 .gha-feed h2,
 .gha-feed h3,
@@ -17,46 +18,56 @@
     margin: 0;
     padding: 0
 }
+
 .gha-feed ul {
     list-style-type: none;
     padding: 0;
     margin: 0
 }
+
 .gha-feed li {
     list-style-type: none;
     line-height: 1.4
 }
+
 .gha-feed small {
-    color: #666;
+    color: #666666;
     font-weight: 400;
     font-size: 13px
 }
+
 .gha-feed small a {
     font-weight: 400
 }
+
 .gha-feed small a .more-commits {
     font-size: 11px
 }
+
 span.gha-time {
     color: #bbb;
     font-weight: 400;
     font-size: 12px
 }
+
 .gha-feed a {
-    color: #4183c4;
+    color: #4183C4;
     text-decoration: none;
-    font-weight: 700
+    font-weight: 400
 }
+
 .gha-feed a:hover {
-    text-decoration: underline
+    text-decoration: none
 }
+
 .gha-feed pre {
     padding: 0;
     border: 0;
     border-radius: 0;
-    box-shadow: 1px 1px 4px #bbb;
-    color: #fff
+    box-shadow: 1px 1px 4px #BBBBBB;
+    color: #FFFFFF
 }
+
 .gha-header {
     position: absolute;
     top: 1px;
@@ -65,9 +76,9 @@ span.gha-time {
     padding: 10px;
     height: 67px;
     border-bottom: 1px solid #ddd;
-    background: #fff;
-    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f4f4f4', GradientType=0)
+    background: #FFFFFF;
 }
+
 .gha-footer {
     position: absolute;
     bottom: -1px;
@@ -76,11 +87,11 @@ span.gha-time {
     border-top: 1px solid #ddd;
     height: 16px;
     width: calc(100% - 15px);
-    background: #fff;
-    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f4f4f4', GradientType=0);
+    background: #FFFFFF;
     color: #495961;
     font-size: 13px
 }
+
 .gha-footer a {
     float: right;
     color: #495961;
@@ -88,10 +99,7 @@ span.gha-time {
     font-size: 13px;
     font-weight: 700
 }
-.gha-footer a:hover,
-.gha-header a:hover {
-    text-decoration: none
-}
+
 .gha-github-icon {
     display: inline;
     float: left;
@@ -100,9 +108,11 @@ span.gha-time {
     height: 35px;
     color: #495961
 }
+
 .gha-github-icon .octicon {
     font: normal normal 40px octicons
 }
+
 .gha-gravatar {
     display: inline;
     float: right;
@@ -111,93 +121,113 @@ span.gha-time {
     max-width: 60px;
     height: 67px
 }
+
 .gha-gravatar img {
     padding: 3px;
     width: 100%;
-    border: 1px solid #ddd;
+    border: 1px solid #DDDDDD;
     box-shadow: 1px 1px 3px #ccc
 }
+
 .gha-activity {
     clear: both;
     padding: 10px 0;
     width: 100%;
     border-bottom: 1px solid #ddd
 }
+
 .gha-activity.gha-small {
     margin-top: 5px;
     font-weight: 400;
     font-size: 13px
 }
+
 .gha-activity.gha-small a {
     font-weight: 400
 }
+
 .gha-activity.gha-small .gha-message {
     float: left;
     width: auto;
     margin-right: 5px;
     margin-top: 5px
 }
+
 .gha-activity.gha-small span {
     font-size: 16px
 }
+
 .gha-activity.gha-small .gha-time {
     float: left;
     margin-top: 6px
 }
+
 .gha-activity:last-child {
     padding-bottom: 100px
 }
+
 .gha-repo {
     clear: both;
     padding: 10px 0;
     width: 100%;
     border-bottom: 1px solid #ddd
 }
+
 .gha-activity-icon .octicon {
     display: inline;
     float: left;
     clear: both;
     margin: 6px auto;
     width: 50px;
-    color: #bbb;
-    text-align: center;
+    color: #BBBBBB;
     font: normal normal 30px octicons
 }
+
 .gha-activity-icon .gha-small {
     font-size: 16px
 }
+
 .gha-message {
     display: inline-block;
     float: left;
     width: calc(100% - 50px)
 }
+
 .gha-message-commits {
     font-size: 11px
 }
+
 .gha-message-merge {
     padding: 3px 7px;
     border-radius: 3px;
-    background: #e8f1f6;
+    background: #E8F1F6;
     color: rgba(0, 0, 0, .5);
     font-size: 12px;
     line-height: 2
 }
+
 .gha-sha {
     font-size: 12px;
-    font-family: Consolas, "Liberation Mono", Courier, monospace
+    font-family: 'Source Code Pro', monospace;
+    float: left;
 }
+
 .gha-gravatar-small {
     float: left;
     margin-right: 6px;
     width: 30px
+    display: none;
 }
+
 .gha-gravatar-commit {
     margin-bottom: -3px;
     border-radius: 2px
 }
+
 .gha-gravatar-user {
     float: left
 }
+
 .gha-user-info {
     display: inline-block;
     float: left;
@@ -206,40 +236,57 @@ span.gha-time {
     color: #495961;
     font-size: 20px
 }
+
 .gha-user-info a {
     color: #495961
 }
+
 .gha-user-info p a {
     font-weight: 100
 }
+
 .gha-without-name {
     padding-top: 20px;
     padding-left: 15px
 }
+
 .gha-info {
     margin: 15px;
     padding: 10px;
-    border: 1px solid #e4e4c6;
+    border: 1px solid #E8F1F6;
     border-radius: 4px;
-    background: #ffffde;
-    color: #6d6d4b;
+    background: #FFFFDE;
+    color: #6D6D4B;
     font-weight: 400;
     font-size: 13px
 }
+
 .gha-time {
-    color: #bbb;
+    color: #BBBBBB;
     font-weight: 400;
     font-size: 12px
 }
+
 .gha-clear {
     clear: both
 }
+
 .gha-muted {
-    color: #666
+    color: #666666
 }
+
 .gha-push {
     height: 87px
 }
+
 .gha-push-small {
     height: 26px
+}
+
+.gha-commits {
+    float: left;
+}
+
+.gha-commits a {
+    margin-right: 10px
 }
