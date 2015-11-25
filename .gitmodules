@@ -1,3 +1,6 @@
 [submodule "github-activity"]
     path = vendors/github-activity
     url = https://github.com/caseyscarborough/github-activity
+[submodule "jquery-shuffle-letters-plugin"]
+    path = vendors/jquery-shuffle-letters-plugin
+    url = https://github.com/robbue/jquery-shuffle-letters-plugin

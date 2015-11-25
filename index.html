@@ -3,6 +3,7 @@
 <!-- Homepage for oliverabdulrahim.github.io -->
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
+        <title>Oliver Abdulrahim</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <meta name="keywords" content="Oliver, Abdulrahim, GitHub, web, site"/>
         <meta name="description" content="Oliver Abdulrahim's Website"/>
@@ -19,20 +20,27 @@
         <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 
         <script src="resources/js/github-activity.js"></script>
+        <script src="resources/js/messages.js"></script>
+        <script src="vendors/jquery-shuffle-letters-plugin/jquery.shuffleLetters.js"></script>
 
+        <!-- Sets up the GitHub activity widget on page load -->
         <script>
-            function updateFeed(username) {
+            $(document).ready(function() {
                 GitHubActivity.feed({
-                    username: username,
+                    username: 'oliverabdulrahim',
                     selector: '#feed',
                     limit: 10
                 });
-            }
+            });
 
             $(document).ready(function() {
-                updateFeed('oliverabdulrahim');
-                $('#update').click(function() {
-                    updateFeed($("#username").val());
+                var shuffle = $('#hipsterText');
+                shuffle.click(function() {
+                    shuffle.shuffleLetters({
+                        "text": randomUniqueMessage(),
+                        "step": 6,
+                        "fps" : 25
+                    });
                 });
             });
         </script>
@@ -44,7 +52,7 @@
                 <div id="logo">
                     <img src="resources/images/hipster-profile.png" alt="I'm trapped in this image, help!"/>
                     <h1><a href="#">Oliver Abdulrahim</a></h1>
-                    <span>Not a robot</span>
+                    <span id="hipsterText", class="noselect">You can't resist clicking this.</span>
                 </div>
                 <div id="menu">
                     <ul>
@@ -66,7 +74,6 @@
                         </span>
                     </div>
                 </div>
-                <!-- If JavaScript is disabled, nothing will show here anyway, so okay to make it hidden by default. -->
                 <div id="featured" class="animated fadeInDown" style="animation-delay: 0.8s;">
                     <div class="title">
                         <h2>Stuff I've Done Lately</h2>
@@ -75,7 +82,7 @@
                     </div>
                 </div>
                 <div id="copyright" class="animated fadeInDown" style="animation-delay: 1.6s;">
-                    <span>&copy; Oliver Abdulrahim. All rights reserved. </span>
+                    <span>&copy; Oliver Abdulrahim. All rights reserved.</span>
                     <span>Template from  <a href="http://templated.co" rel="nofollow">here</a>.</span>
                 </div>
             </div>
