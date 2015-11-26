@@ -23,7 +23,7 @@
         <script src="resources/js/messages.js"></script>
         <script src="vendors/jquery-shuffle-letters-plugin/jquery.shuffleLetters.js"></script>
 
-        <!-- Sets up the GitHub activity widget on page load -->
+        <!-- Sets up the GitHub activity widget on page load and  the randomized profile text -->
         <script>
             $(document).ready(function() {
                 GitHubActivity.feed({
@@ -43,6 +43,18 @@
                     });
                 });
             });
+
+            // The delay between fading in each DOM with the "hidden" class in milliseconds
+            var animationDelay = 1000;
+            $(document).ready(function() {
+                $('.hidden').each(function(i) {
+                    var $hiddenElement = $(this);
+                    setTimeout(function() {
+                        $hiddenElement.addClass('animated fadeInDown');
+                        $hiddenElement.removeClass('hidden');
+                    }, animationDelay * i);
+                });
+            });
         </script>
     </head>
 
@@ -52,7 +64,7 @@
                 <div id="logo">
                     <img src="resources/images/hipster-profile.png" alt="I'm trapped in this image, help!"/>
                     <h1><a href="#">Oliver Abdulrahim</a></h1>
-                    <span id="hipsterText", class="noselect">You can't resist clicking this.</span>
+                    <span id="hipsterText" class="noselect">You can't resist clicking this.</span>
                 </div>
                 <div id="menu">
                     <ul>
@@ -64,7 +76,7 @@
                 </div>
             </div>
             <div id="main">
-                <div id="welcome" class="animated fadeInDown">
+                <div id="welcome" class="hidden">
                     <div class="title">
                         <h2>Programming for the greater good. <br> Something like that, anyway.</h2>
                         <span class="subtitle">
@@ -74,14 +86,14 @@
                         </span>
                     </div>
                 </div>
-                <div id="featured" class="animated fadeInDown" style="animation-delay: 0.8s;">
+                <div id="featured" class="hidden">
                     <div class="title">
                         <h2>Stuff I've Done Lately</h2>
                         <span class="subtitle">Polled directly from my GitHub profile.</span>
                         <div id="feed"></div>
                     </div>
                 </div>
-                <div id="copyright" class="animated fadeInDown" style="animation-delay: 1.6s;">
+                <div id="copyright" class="hidden">
                     <span>&copy; Oliver Abdulrahim. All rights reserved.</span>
                     <span>Template from  <a href="http://templated.co" rel="nofollow">here</a>.</span>
                 </div>
