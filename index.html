@@ -20,32 +20,13 @@
         <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 
         <script src="resources/js/github-activity.js"></script>
+        <script src="resources/js/setup.js"></script>
 
         <!-- Sets up the GitHub activity widget on page load -->
         <script>
-            $(function() {
-                $("#header").load("resources/sidebar.html");
-            });
-
-            $(document).ready(function() {
-                GitHubActivity.feed({
-                    username: 'oliverabdulrahim',
-                    selector: '#feed',
-                    limit: 10
-                });
-            });
-
-            // The delay between fading in each DOM with the "hidden" class in milliseconds
-            var animationDelay = 500;
-            $(window).bind("load", function() {
-                $('.hidden').each(function(i) {
-                    var $hiddenElement = $(this);
-                    setTimeout(function() {
-                        $hiddenElement.addClass('animated fadeInDown');
-                        $hiddenElement.removeClass('hidden');
-                    }, animationDelay * i);
-                });
-            });
+            loadSidebarTo('#header');
+            loadGitHubActivityTo('#feed');
+            fadeInHiddenDOMs(defaultAnimationDelay);
         </script>
     </head>
 
@@ -57,7 +38,7 @@
                     <div class="title">
                         <h2>Programming for the greater good. <br> Something like that, anyway.</h2>
                         <span class="subtitle">
-                            Hi, I'm Oliver, and I write code. This is my website. That much is obvious, right? Less
+                            Hi, I'm Oliver. I write code. This is my website. That much is obvious, right? Less
                             subtly, you can find links to my projects, résumé, and contact information. Feel free to
                             poke around!
                         </span>
