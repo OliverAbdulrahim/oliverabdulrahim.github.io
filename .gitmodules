@@ -4,3 +4,6 @@
 [submodule "jquery-shuffle-letters-plugin"]
     path = vendors/jquery-shuffle-letters-plugin
     url = https://github.com/robbue/jquery-shuffle-letters-plugin
+[submodule "countUp.js"]
+	path = vendors/countUp.js
+	url = https://github.com/inorganik/countUp.js

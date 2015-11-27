@@ -1,0 +1,53 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    margin: 0pt;
+    font-size: 16pt;
+    font-weight: 300;
+    background: #202020;
+    color: #333333;
+}
+
+#main {
+    display: inline-block;
+    max-width: 800px;
+    padding: 3em 3em 3em 3em;
+    background: #FFFFFF;
+    border-top: 6pt solid #2980B9;
+    text-align: center;
+}
+
+h1,
+h2 {
+    margin: auto;
+}
+
+h1 {
+    font-size: 24pt;
+}
+
+h2 {
+    font-size: 64pt;
+}
+
+p {
+    color: #6F6F6F;
+}
+
+a {
+    color: #2980B9;
+    text-decoration: none;
+}
+
+a:hover {
+    -webkit-transition: color 0.1s linear;
+    -moz-transition: color 0.1s linear;
+    -ms-transition: color 0.1s linear;
+    -o-transition: color 0.1s linear;
+    transition: color 0.1s linear;
+    color: #FFC82C
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
