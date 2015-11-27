@@ -37,10 +37,12 @@
 }
 
 .gha-feed small a {
+    color: #2980B9;
     font-weight: 400
 }
 
 .gha-feed small a .more-commits {
+    color: #2980B9;
     font-size: 11px
 }
 
@@ -51,13 +53,19 @@ span.gha-time {
 }
 
 .gha-feed a {
-    color: #4183C4;
+    color: #2980B9;
     text-decoration: none;
     font-weight: 400
 }
 
 .gha-feed a:hover {
-    text-decoration: none
+    -webkit-transition: color 0.1s linear;
+    -moz-transition: color 0.1s linear;
+    -ms-transition: color 0.1s linear;
+    -o-transition: color 0.1s linear;
+    transition: color 0.1s linear;
+    text-decoration: none;
+    color: #FFC82C
 }
 
 .gha-feed pre {
@@ -241,6 +249,10 @@ span.gha-time {
     color: #495961
 }
 
+.gha-user-info a:hover {
+    color: inherit;
+}
+
 .gha-user-info p a {
     font-weight: 100
 }
@@ -288,5 +300,6 @@ span.gha-time {
 }
 
 .gha-commits a {
+    color: #2980B9;
     margin-right: 10px
 }

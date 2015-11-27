@@ -41,7 +41,13 @@ a {
 }
 
 a:hover {
+    -webkit-transition: color 0.1s linear;
+    -moz-transition: color 0.1s linear;
+    -ms-transition: color 0.1s linear;
+    -o-transition: color 0.1s linear;
+    transition: color 0.1s linear;
     text-decoration: none;
+    color: #FFC82C
 }
 
 .container {
@@ -503,6 +509,7 @@ ul.contact li a.icon-twitter:before {
 }
 
 /* Special Text */
+
 .noselect {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
