@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<!-- Sidebar page for oliverabdulrahim.github.io -->
+<html xmlns="//www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <script src="//code.jquery.com/jquery-latest.min.js"></script>
+    <script src="resources/js/messages.js"></script>
+    <script src="vendors/jquery-shuffle-letters-plugin/jquery.shuffleLetters.js"></script>
+
+    <!-- Sets up the randomized profile text and currently selected page on load -->
+    <script>
+        $(function() {
+            var thisFile = $(document).attr('title').toLowerCase();
+            $('li').each(function() {
+                var contents = $(this).text().toLowerCase();
+                if (thisFile.indexOf(contents) != -1) {
+                    $(this).addClass('current_page_item');
+                }
+            });
+        });
+
+        $(document).ready(function() {
+            var shuffle = $('#hipsterText');
+            shuffle.click(function() {
+                shuffle.shuffleLetters({
+                    "text": randomUniqueMessage(),
+                    "step": 6,
+                    "fps" : 25
+                });
+            });
+        });
+    </script>
+</head>
+
+<div id="sidebar">
+    <div id="logo">
+        <img src="resources/images/hipster-profile.png" alt="I'm trapped in this image, help!"/>
+        <h1><a href="index.html">Oliver Abdulrahim</a></h1>
+        <span id="hipsterText" class="noselect">You can't resist clicking this.</span>
+    </div>
+    <div id="menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="resume.html">Résumé</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+</div>
+
+<!-- Now Playing :: Paolo Mojo - 1983 (Eric Prydz Remix) -->

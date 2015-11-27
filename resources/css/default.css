@@ -64,21 +64,21 @@ a:hover {
 .image-full {
     display: block;
     width: 100%;
-    margin: 0 0 2em 0;
+    margin: 0em 0em 2em 0em;
 }
 
 .image-left {
     float: left;
-    margin: 0 2em 2em 0;
+    margin: 0em 2em 2em 0em;
 }
 
 .image-centered {
     display: block;
-    margin: 0 0 2em 0;
+    margin: 0em 0em 2em 0em;
 }
 
 .image-centered img {
-    margin: 0 auto;
+    margin: 0em auto;
     width: auto;
 }
 
@@ -91,8 +91,8 @@ a:hover {
 /* List Styles */
 
 ul.style1 {
-    margin: 0 auto;
-    padding: 0;
+    margin: 0em auto;
+    padding: 0em;
     width: 80%;
     overflow: hidden;
     list-style: none;
@@ -121,7 +121,7 @@ ul.style1 a {
 }
 
 ul.style1 a:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 ul.style1 h3 {
@@ -377,6 +377,7 @@ ul.contact li a.icon-twitter:before {
 }
 
 #menu .current_page_item a {
+    transition: background-color 0.5s ease-in;
     background: #2980B9;
     color: rgba(255, 255, 255, 1);
 }

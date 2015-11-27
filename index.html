@@ -3,7 +3,7 @@
 <!-- Homepage for oliverabdulrahim.github.io -->
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>Oliver Abdulrahim</title>
+        <title>Oliver Abdulrahim – Home</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <meta name="keywords" content="Oliver, Abdulrahim, GitHub, web, site"/>
         <meta name="description" content="Oliver Abdulrahim's Website"/>
@@ -20,11 +20,13 @@
         <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 
         <script src="resources/js/github-activity.js"></script>
-        <script src="resources/js/messages.js"></script>
-        <script src="vendors/jquery-shuffle-letters-plugin/jquery.shuffleLetters.js"></script>
 
-        <!-- Sets up the GitHub activity widget on page load and  the randomized profile text -->
+        <!-- Sets up the GitHub activity widget on page load -->
         <script>
+            $(function() {
+                $("#header").load("resources/sidebar.html");
+            });
+
             $(document).ready(function() {
                 GitHubActivity.feed({
                     username: 'oliverabdulrahim',
@@ -33,20 +35,9 @@
                 });
             });
 
-            $(document).ready(function() {
-                var shuffle = $('#hipsterText');
-                shuffle.click(function() {
-                    shuffle.shuffleLetters({
-                        "text": randomUniqueMessage(),
-                        "step": 6,
-                        "fps" : 25
-                    });
-                });
-            });
-
             // The delay between fading in each DOM with the "hidden" class in milliseconds
             var animationDelay = 1000;
-            $(document).ready(function() {
+            $(window).bind("load", function() {
                 $('.hidden').each(function(i) {
                     var $hiddenElement = $(this);
                     setTimeout(function() {
@@ -60,21 +51,7 @@
 
     <body>
         <div id="page" class="container">
-            <div id="header">
-                <div id="logo">
-                    <img src="resources/images/hipster-profile.png" alt="I'm trapped in this image, help!"/>
-                    <h1><a href="#">Oliver Abdulrahim</a></h1>
-                    <span id="hipsterText" class="noselect">You can't resist clicking this.</span>
-                </div>
-                <div id="menu">
-                    <ul>
-                        <li class="current_page_item"><a href="#" accesskey="1" title="">Home</a></li>
-                        <li><a href="#" accesskey="2" title="">Projects</a></li>
-                        <li><a href="#" accesskey="3" title="">Résumé</a></li>
-                        <li><a href="#" accesskey="4" title="">Contact Me</a></li>
-                    </ul>
-                </div>
-            </div>
+            <div id="header"></div>
             <div id="main">
                 <div id="welcome" class="hidden">
                     <div class="title">

@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<!-- Projects page for oliverabdulrahim.github.io -->
+<html xmlns="//www.w3.org/1999/xhtml">
+    <head>
+        <title>Oliver Abdulrahim – Projects</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="keywords" content="Oliver, Abdulrahim, GitHub, web, site"/>
+        <meta name="description" content="Oliver Abdulrahim's Website"/>
+
+        <!-- Vendor Dependencies -->
+        <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet">
+        <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+
+        <link href="resources/css/default.css" rel="stylesheet" type="text/css" media="all"/>
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
+        <script src="//code.jquery.com/jquery-latest.min.js"></script>
+
+        <script src="resources/js/projects.js"></script>
+
+        <!-- Sets up the randomized profile text and auto-loading projects from GitHub -->
+        <script>
+            $(function() {
+                $("#header").load("resources/sidebar.html");
+            });
+
+            $(document).ready(function() {
+                $("#auto-load-projects").loadRepositories(username);
+            });
+
+            // The delay between fading in each DOM with the "hidden" class in milliseconds
+            var animationDelay = 1000;
+            $(window).bind("load", function() {
+                $('.hidden').each(function(i) {
+                    var $hiddenElement = $(this);
+                    setTimeout(function() {
+                        $hiddenElement.addClass('animated fadeInDown');
+                        $hiddenElement.removeClass('hidden');
+                    }, animationDelay * i);
+                });
+            });
+        </script>
+    </head>
+
+    <body>
+        <div id="page" class="container">
+            <div id="header"></div>
+            <div id="main">
+                <div id="projects">
+                    <div class="title hidden">
+                        <h2>my latest projects</h2>
+                        <span class="subtitle">
+                            These have links to my GitHub and are fully-documented. Feel free to make a pull request on
+                            anything here!
+                        </span>
+                    </div>
+                    <div id="auto-load-projects"></div>
+                </div>
+                <div id="copyright" class="hidden">
+                    <span>&copy; Oliver Abdulrahim. All rights reserved.</span>
+                    <span>Template from  <a href="http://templated.co" rel="nofollow">here</a>.</span>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
+<!-- Now Playing :: Eric Prydz - Liam -->
