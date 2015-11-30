@@ -3,5 +3,8 @@
 Repository for my personal website. Template from [here](http://templated.co/).
 
 # TODO
-1. Add pages for projects, résumé, and contact information
-2. Clean up [github-activity.css](/resources/css/github-activity.css)
+1. Add pages for:
+  - Résumé
+  - Contact information
+2. Optimize loading, fix minor flickering on page load
+3. Improve browser compatability
