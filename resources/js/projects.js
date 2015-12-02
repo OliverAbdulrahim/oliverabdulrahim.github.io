@@ -22,12 +22,13 @@ jQuery.fn.loadRepositories = function(username) {
                 var repoLink = (this.homepage) ? this.homepage : this.html_url;
                 var name = this.name;
                 var description = this.description;
+                var language = this.language;
                 list.append('<li class="first hidden">'
                             + '<p class="date">' + date + '</p>'
                             + '<h3><a href="' + repoLink + '">' + name + '</a></h3>'
                             + '<p>' + description + '</p>'
-                            + '<p>Written in ' + this.language + '</p>'
-                            + '</li>');
+                            + '<p>Written in ' + language + '</p>'
+                          + '</li>');
             }
         });
     });
