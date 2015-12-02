@@ -259,16 +259,12 @@ ul.style1 .date a:hover {
 
 /* Menu */
 
-#menu {
-
-}
-
-#menu ul {
-
-}
-
 #menu li {
     border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+#menu ul:last-child {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 #menu li a, #menu li span {
@@ -281,18 +277,10 @@ ul.style1 .date a:hover {
     color: rgba(255, 255, 255, 0.5);
 }
 
-#menu li:hover a, #menu li.active a, #menu li.active span {
-
-}
-
 #menu .current_page_item a {
     transition: background-color 0.5s ease-in;
     background: #2980B9;
     color: rgba(255, 255, 255, 1);
-}
-
-#menu .icon {
-
 }
 
 /* Banner */
@@ -327,18 +315,6 @@ ul.style1 .date a:hover {
     margin-bottom: 3em;
     padding-top: 2em;
     border-top: 1px solid rgba(0, 0, 0, 0.08);
-}
-
-/* Sidebar */
-
-#sidebar {
-
-}
-
-/* Footer */
-
-#footer {
-
 }
 
 /* Copyright */
