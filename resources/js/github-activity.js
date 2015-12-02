@@ -363,7 +363,7 @@ var templates = {
                </div>',
     UserHeader: '<div class="gha-header">\
                  <div class="gha-github-icon"><span class="octicon octicon-mark-github"></span></div>\
-                 <div class="gha-user-info{{withoutName}}">{{{userLink}}}<p>{{{userLink}}}</p></div>\
+                 <div class="gha-user-info{{withoutName}}">{{{userLink}}}</p></div>\
                </div><div class="gha-push"></div>',
     Footer: '<div class="gha-footer"><a href="https://github.com/caseyscarborough/github-activity" target="_blank">GitHub Activity Stream</a>',
     NoActivity: '<div class="gha-info">This user does not have any public activity yet.</div>',
